@@ -1,5 +1,4 @@
 PHP ?= 7.4
-SSH ?= ~/.ssh
 
 .PHONY: start
 start: erase build up ## clean current environment, recreate dependencies and spin up again
@@ -14,7 +13,7 @@ erase: ## stop and delete containers, clean volumes.
 
 .PHONY: build
 build: ## build environment and initialize composer and project dependencies
-		docker-compose build --build-arg PHP_VERSION=$(PHP) --build-arg SSH_PATH=$(SSH)
+		docker-compose build --build-arg PHP_VERSION=$(PHP)
 
 .PHONY: up
 up: ## spin up environment
