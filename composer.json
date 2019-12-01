@@ -20,8 +20,8 @@
         ],
         "gitdiff": [
             "git diff origin/master... > diff.txt",
-            "phpcs --extensions=php --standard=PSR1,PSR12 --report=json src > phpcs.json || true",
-            "diffFilter --phpcs diff.txt phpcs.json"
+            "vendor/bin/phpcs --extensions=php --standard=PSR1,PSR12 --report=json src > phpcs.json || true",
+            "vendor/bin/diffFilter --phpcs diff.txt phpcs.json"
         ]
     }
 }
