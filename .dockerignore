@@ -1,0 +1,10 @@
+.idea
+.gitignore
+LICENSE
+README.md
+docker-compose.yml
+Dockerfile
+Makefile
+vendor
+diff.txt
+phpcs.json

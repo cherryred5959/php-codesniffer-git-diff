@@ -1,0 +1,27 @@
+{
+    "name": "cherryred5959/php-codesniffer-git-diff",
+    "type": "project",
+    "license": "MIT",
+    "require-dev": {
+        "exussum12/coverage-checker": "^0.11.2",
+        "squizlabs/php_codesniffer": "^3.5"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src"
+        }
+    },
+    "scripts": {
+        "codesniffer": [
+            "phpcs --extensions=php --standard=PSR1,PSR12 src"
+        ],
+        "gitdiff": [
+            "git diff origin/master... > diff.txt",
+            "phpcs --extensions=php --standard=PSR1,PSR12 --report=json src > phpcs.json || true",
+            "diffFilter --phpcs diff.txt phpcs.json"
+        ]
+    }
+}

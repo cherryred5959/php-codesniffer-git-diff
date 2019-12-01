@@ -1,0 +1,1 @@
+# PHP Codesniffer Git Diff
