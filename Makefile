@@ -16,8 +16,7 @@ build: ## build environment and initialize composer and project dependencies
 		docker-compose build --build-arg PHP_VERSION=$(PHP)
 
 .PHONY: up
-up: ## spin up environment
-		docker-compose up -d
+up: gitdiff ## spin up environment
 
 .PHONY: codesniffer
 codesniffer: ## run codesniffer
