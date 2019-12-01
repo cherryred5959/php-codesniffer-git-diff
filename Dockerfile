@@ -20,5 +20,3 @@ WORKDIR /app
 COPY . .
 
 RUN composer install --no-interaction
-
-SHELL ["/bin/bash", "-c"]
